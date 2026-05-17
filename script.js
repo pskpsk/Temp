@@ -36,8 +36,8 @@ title.addEventListener('click', () => {
   showRemaining = !showRemaining;
 
   title.textContent = showRemaining
-    ? 'Remaining Time'
-    : 'Elapsed Time';
+    ? 'Progress'
+    : 'Progress';
 
   updateTimer();
 });
