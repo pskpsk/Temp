@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Elapsed Timer</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+
+    <h1 id="toggleTitle">Elapsed Time</h1>
+
+    <div class="progress-container">
+      <div class="progress-wrapper">
+
+        <svg class="progress-ring" width="220" height="220">
+
+          <circle
+            class="progress-ring-bg"
+            cx="110"
+            cy="110"
+            r="90"
+          ></circle>
+
+          <circle
+            class="progress-ring-circle"
+            cx="110"
+            cy="110"
+            r="90"
+          ></circle>
+
+        </svg>
+
+        <div class="progress-text" id="progressText">0%</div>
+
+      </div>
+    </div>
+
+    <div class="timer">
+
+      <div class="card">
+        <div class="value" id="days">00</div>
+        <div class="label">Days</div>
+      </div>
+
+      <div class="card">
+        <div class="value" id="hours">00</div>
+        <div class="label">Hours</div>
+      </div>
+
+      <div class="card">
+        <div class="value" id="minutes">00</div>
+        <div class="label">Minutes</div>
+      </div>
+
+      <div class="card">
+        <div class="value" id="seconds">00</div>
+        <div class="label">Seconds</div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+<audio id="tickSound" preload="auto">
+  <source src="tick.mp3" type="audio/mpeg" />
+</audio>
+</body>
+</html>

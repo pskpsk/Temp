@@ -1,0 +1,186 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(-45deg, #020617, #0f172a, #1e1b4b, #000000);
+  background-size: 400% 400%;
+  animation: gradientMove 12s ease infinite;
+  color: white;
+  overflow: hidden;
+}
+body {
+  min-height: 100vh;
+  padding: 20px;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.container {
+  text-align: center;
+  width: 100%;
+  max-width: 1000px;
+  padding: 20px;
+  margin-top: -20px;
+}
+
+h1 {
+  font-size: 4rem;
+  margin-bottom: 25px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+h1:hover {
+  transform: scale(1.03);
+  opacity: 0.85;
+}
+
+.progress-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.progress-wrapper {
+  position: relative;
+  width: 160px;
+  height: 160px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  padding: 22px 15px;
+  border-radius: 18px;
+}
+.progress-ring {
+  transform: rotate(-90deg);
+  overflow: visible;
+}
+
+.progress-ring-bg {
+  fill: none;
+  stroke: rgba(255,255,255,0.12);
+  stroke-width: 12;
+}
+
+.progress-ring-circle {
+  fill: none;
+  stroke: #38bdf8;
+  stroke-width: 12;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.8s ease;
+  transform-origin: center;
+  filter: drop-shadow(0 0 12px #38bdf8);
+}
+
+.progress-text {
+  position: absolute;
+  font-size: 2rem;
+  font-weight: bold;
+}
+.progress-ring-circle {
+  filter: drop-shadow(0 0 10px #38bdf8);
+}
+
+.card {
+  box-shadow:
+    0 8px 20px rgba(0,0,0,0.35),
+    0 0 15px rgba(56,189,248,0.08);
+}
+
+.timer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 20px;
+  padding: 30px 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+.value {
+  font-size: 4rem;
+  font-weight: bold;
+  transition: transform 0.2s ease;
+}
+.value {
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+.label {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #cbd5e1;
+}
+
+@media (max-width: 600px) {
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .value {
+    font-size: 2.8rem;
+  }
+
+  .progress-wrapper {
+    width: 180px;
+    height: 180px;
+  }
+}
+h1 {
+  font-size: 2.2rem;
+}
+
+.progress-text {
+  font-size: 1.6rem;
+}
+.blink {
+  animation: blinkAnim 0.4s ease;
+}
+
+@keyframes blinkAnim {
+
+  0% {
+    opacity: 0.4;
+    transform: scale(1.18);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
