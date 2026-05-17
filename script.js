@@ -71,9 +71,21 @@ function blinkIfChanged(id, newValue) {
 function updateProgress(now) {
 
   const totalDuration = targetDate - startDate;
-  const elapsed = now - startDate;
 
-  let progress = (elapsed / totalDuration) * 100;
+  let progress;
+
+  if (showRemaining) {
+
+    const remaining = targetDate - now;
+
+    progress = (remaining / totalDuration) * 100;
+
+  } else {
+
+    const elapsed = now - startDate;
+
+    progress = (elapsed / totalDuration) * 100;
+  }
 
   progress = Math.min(Math.max(progress, 0), 100);
 
